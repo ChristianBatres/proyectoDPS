@@ -1,3 +1,23 @@
 
 
+<div *ngIf="identity" class="navigation col-lg-1">
     <h1>{{ title }}</h1>
+    </div>
+<div class="clearfix"></div>
+<div *ngIf="identity" class="central col-lg-11">
+       <p>Estas logueado en la app</p>
+</div>
+<div *ngIf="!identity">
+    <div class="row">
+        
+            <div class="col-xl-6">
+                <h1>Identificate</h1>
+            </div>
+            <div class="col-xl-6">
+                <h1>Registrate</h1>
+            </div>
+        
+      </div>
+   
+</div>    
+
