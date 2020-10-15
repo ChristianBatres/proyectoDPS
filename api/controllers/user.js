@@ -21,7 +21,7 @@ function saveUser(req, res){
     user.name=params.name;
     user.subname=params.subname;
     user.email=params.email;
-    user.role='ROLE_ADMIN';
+    user.role=params.role;
     user.image='null';
     if (params.password) {
         //encriptar contrasenia y guardar datos
