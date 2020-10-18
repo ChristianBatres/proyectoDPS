@@ -15,7 +15,7 @@ export class UserService{
     constructor( public http: HttpClient ){
         this.url =GLOBAL.url;
     }
-    signup(userToLogin, gethash = null){
+    signup(userToLogin, gethash = null): Observable<any>{ 
         if(gethash != null){
             userToLogin.gethash =gethash;
         }
@@ -26,7 +26,7 @@ export class UserService{
         return this.http.post(this.url+'login',params,{headers:headers}); 
     }
 
-    register(user_to_register){
+    register(user_to_register): Observable<any>{
         let json =JSON.stringify(user_to_register);   
         let params=json;
 
