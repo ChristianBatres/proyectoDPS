@@ -34,7 +34,7 @@ export class UserService{
         return this.http.post(this.url+'register',params,{headers:headers}); 
     }
 
-    update_user(user_to_update){
+    updateUser(user_to_update):Observable<any>{
 
         let params = JSON.stringify(user_to_update);
         let headers = new HttpHeaders({
@@ -57,7 +57,7 @@ export class UserService{
     }
 
     getToken(){
-        let token =JSON.parse(localStorage.getItem('token'));
+        let token =(localStorage.getItem('token'));
         if (token != "undefined") {
             this.token=token;
         } else {
