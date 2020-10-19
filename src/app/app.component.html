@@ -2,12 +2,45 @@
 
 <div *ngIf="identity" class="navigation col-lg-1">
     <h1>{{ title }}</h1>
-    <span>{{identity.name}}  {{identity.subname}}</span>
+    <nav id="navigation">
+        <a href="#">
+            <span class="fas fa-search"></span>
+        Buscar
+        </a>
+        <a href="#">
+            <span class="fas fa-star"></span>
+       Artistas
+        </a>
+
+        <a href="#">
+            <span class="fas fa-book"></span>Albums
+      
+        </a>
+
+
+      
+
+
+        
+</nav>
+
+<nav id="user_logged">
+    <span>{{identity.name}}</span>
+
+   
     <span class="btn btn-warning" (click)="logout()"> Cerrar Sesion</span>
+
+    <a [routerLink]="['/mis-datos']">
+        <span class="fas fa-cogs"></span>
+   Mis datos
+    </a>
+
+</nav>
     </div>
 <div class="clearfix"></div>
 <div *ngIf="identity" class="central col-lg-11">
        <p>Estas logueado en la app</p>
+      <router-outlet></router-outlet>
 </div>
 <div *ngIf="!identity">
     <br>
