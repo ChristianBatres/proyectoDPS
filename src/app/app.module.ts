@@ -2,20 +2,23 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
-
+import {routing,appRoutingProviders} from './app.routing';
 import {HttpClientModule} from '@angular/common/http';
+import {UserEditComponent} from './components/user-edit.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    UserEditComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
+    routing
   ],
-  providers: [],
+  providers: [appRoutingProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
