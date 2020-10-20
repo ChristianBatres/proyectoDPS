@@ -5,7 +5,12 @@ import { AppComponent } from './app.component';
 import {routing,appRoutingProviders} from './app.routing';
 import {HttpClientModule} from '@angular/common/http';
 import {UserEditComponent} from './components/user-edit.component';
-
+//firebase
+import { AngularFireModule } from "@angular/fire";
+import { AngularFireAuthModule } from "@angular/fire/auth";
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -16,6 +21,10 @@ import {UserEditComponent} from './components/user-edit.component';
     BrowserModule,
     FormsModule,
     HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule,
+    AngularFirestoreModule,
     routing
   ],
   providers: [appRoutingProviders],
