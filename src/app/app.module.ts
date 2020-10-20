@@ -11,17 +11,24 @@ import { AngularFireAuthModule } from "@angular/fire/auth";
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { environment } from '../environments/environment';
+//Artist Modules
+import { ArtistListComponent } from "./components/artist-list.component"
+import { HomeComponent } from "./components/home.component"
+import { ArtistAddComponent} from "./components/artist-add.component"
+import { ArtistEditComponent } from "./components/artist-edit.component"
 
-import {SongAddComponent} from './components/song-add.component';
-import {SongEditComponent} from './components/song-edit.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     UserEditComponent,
-    SongAddComponent,
-    SongEditComponent
+    ArtistListComponent,
+    HomeComponent,
+    ArtistAddComponent,
+    ArtistEditComponent
+    
+
   ],
   imports: [
     BrowserModule,
