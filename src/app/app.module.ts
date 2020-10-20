@@ -5,19 +5,16 @@ import { AppComponent } from './app.component';
 import {routing,appRoutingProviders} from './app.routing';
 import {HttpClientModule} from '@angular/common/http';
 import {UserEditComponent} from './components/user-edit.component';
-<<<<<<< Updated upstream
-//firebase
+
 import { AngularFireModule } from "@angular/fire";
 import { AngularFireAuthModule } from "@angular/fire/auth";
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { environment } from '../environments/environment';
-=======
+
 import {SongAddComponent} from './components/song-add.component';
 import {SongEditComponent} from './components/song-edit.component';
 
-
->>>>>>> Stashed changes
 
 @NgModule({
   declarations: [
