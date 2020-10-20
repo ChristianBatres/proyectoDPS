@@ -5,7 +5,7 @@ import { Observable } from 'rxjs/observable';
 import { GLOBAL } from './global';
 import { Song } from '../models/song';
 
-@Injectable(){
+@Injectable()
     export class SongService{
         public url: string;
 
@@ -71,4 +71,4 @@ import { Song } from '../models/song';
                             .map(res => res.json());
     }
     }
-}
+
