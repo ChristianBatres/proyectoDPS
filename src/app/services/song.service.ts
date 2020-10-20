@@ -13,7 +13,7 @@ import { Song } from '../models/song';
             this.url = GLOBAL.url;
         }
 
-        getSongs(token, albumId == null){
+        getSongs(token, albumId = null){
             let headers = new Headers({
                 'Content-Type':'application/json',
                 'Autorization':token
