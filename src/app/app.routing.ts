@@ -18,7 +18,9 @@ const appRoutes: Routes = [
     {path: "editar-artista/:id", component: ArtistEditComponent},
     {path: "artistas/:page", component: ArtistListComponent},
     {path:'mis-datos',component:UserEditComponent},
-    {path:'**',component:UserEditComponent},
+
+    {path:'**',component:UserEditComponent}
+
 ];
 
 export const appRoutingProviders: any[] = [];

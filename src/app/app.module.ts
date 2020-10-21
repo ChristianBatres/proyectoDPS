@@ -22,12 +22,8 @@ import { ArtistEditComponent } from "./components/artist-edit.component"
 @NgModule({
   declarations: [
     AppComponent,
-    UserEditComponent,
-    ArtistListComponent,
-    HomeComponent,
-    ArtistAddComponent,
-    ArtistEditComponent
-    
+
+    UserEditComponent
 
   ],
   imports: [
