@@ -10,6 +10,10 @@ import { ArtistListComponent } from "./components/artist-list.component"
 import { ArtistAddComponent } from "./components/artist-add.component"
 import { ArtistEditComponent } from "./components/artist-edit.component"
 
+//Album
+import { AlbumAddComponent } from "./components/album-add.component"
+import { AlbumEditComponent} from "./components/album-edit.component"
+import { AlbumDetailComponent} from "./components/album-detail.component"
 
 
 const appRoutes: Routes = [
@@ -18,7 +22,9 @@ const appRoutes: Routes = [
     {path: "editar-artista/:id", component: ArtistEditComponent},
     {path: "artistas/:page", component: ArtistListComponent},
     {path:'mis-datos',component:UserEditComponent},
-
+    {path:'crear-album/:artist',component:AlbumAddComponent},
+    {path:'editar-album/:id',component:AlbumEditComponent},
+    {path:'album/:id',component:AlbumDetailComponent},
     {path:'**',component:UserEditComponent}
 
 ];

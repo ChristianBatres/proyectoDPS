@@ -1,6 +1,5 @@
 import { Component, OnInit} from "@angular/core"
 import { Router } from "@angular/router"
-
 import { GLOBAL } from "../services/global"
 import { UserService } from "../services/user.service"
 import { ArtistService } from "../services/artist.service"
