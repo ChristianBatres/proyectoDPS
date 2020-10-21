@@ -1,0 +1,39 @@
+<div class="col-lg-6">
+    <h1>{{titulo}}</h1>
+
+    <div *ngIf="addAlbumFormMessage " class="alert alert-info">
+        {{addAlbumFormMessage}}
+    </div>
+
+    <form #formAlbum="ngForm" (ngSubmit)="onSubmit()">
+        <p>
+            <label>Titulo</label>
+            <input #title="ngModel" name="title" title="Titulo" class="form-control" [(ngModel)]="album.title" required>
+            <span *ngIf="!title.valid && title.touched">
+            El titulo es obligatorio
+            </span>
+        </p>
+    
+        <p>
+            <label>Año</label>
+            <textarea #year="ngModel" name="year" title="Año" class="form-control" [(ngModel)]="album.year" required></textarea>
+            <span *ngIf="!year.valid && year.touched">
+            La año es obligatorio
+            </span>
+        </p>
+
+        <div *ngIf="isEdit">
+            <div class="albumImage" *ngIf="album.image && album.image !== 'null'" style="width: 150px;">
+              <img src="{{url + 'getAlbumImage/' + album.image}}" />
+            </div>
+      
+            <p>
+              <label>Sube la imagen del album</label>
+              <input type="file" placeholder="Subir imagen..." (change)="fileChangeEvent($event)">
+            </p>
+        </div>
+    
+        <input type="submit" value="{{titulo}}" class="btn btn-success" [disabled]="!formAlbum.form.valid">
+        
+    </form>
+</div>
