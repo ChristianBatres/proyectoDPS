@@ -20,5 +20,7 @@ export class HomeComponent implements OnInit{
         console.log('home.component.ts cargando');
 
         //conseguir el listado de artistas
+
+        //proved
     }
 }
