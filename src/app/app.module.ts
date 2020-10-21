@@ -12,16 +12,12 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { environment } from '../environments/environment';
 
-import {SongAddComponent} from './components/song-add.component';
-import {SongEditComponent} from './components/song-edit.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    UserEditComponent,
-    SongAddComponent,
-    SongEditComponent
+    UserEditComponent
   ],
   imports: [
     BrowserModule,
